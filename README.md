@@ -61,7 +61,7 @@ By working with the House Rental Dataset, you can achieve the following learning
 
 After training and tuning the machine learning model on the Home Rental Dataset, the performance of the best model is evaluated using accuracy as the evaluation metric. The model accuracy on the test set is 78%, which shows how well the model predicts the rental price based on the given features.
 
-[Model Accuracy](acc.png)
+![Model Accuracy](img/acc.png)
 
 The figure above shows a visualization of the model accuracy, which indicates the predictive power of the trained model.
 
