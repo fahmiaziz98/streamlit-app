@@ -57,6 +57,25 @@ By working with the House Rental Dataset, you can achieve the following learning
    - Enable users to input relevant features of a property and obtain an estimated rental price.
    - Deploy the web application on a suitable platform to make it accessible to users.
 
+## Accuracy Model
+
+After training and tuning the machine learning model on the Home Rental Dataset, the performance of the best model is evaluated using accuracy as the evaluation metric. The model accuracy on the test set is 78%, which shows how well the model predicts the rental price based on the given features.
+
+[Model Accuracy](acc.png)
+
+The figure above shows a visualization of the model accuracy, which indicates the predictive power of the trained model.
+
+## Tabel Accuracy
+
+The table below presents the accuracy scores of different machine learning models evaluated during the model selection and tuning process:
+
+| XGBRegressor    | Accuracy Score train | Accuracy Score test |  RMSE  |
+|-----------------|----------------------|---------------------|--------|
+| Baseline model  | 0.88                 |0.78                 |11669.4 |
+| Hyperparam      | 0.83                 |0.78                 |11676.6 |
+
+
+The table provides a comparison of the accuracy scores achieved by each model, enabling us to identify the best-performing model for predicting rental prices in the House Rental Dataset. As you can see, the model has an overfit because there are too many outliers, and I tried replacing the outliers with intervals and the result is that the model has a considerable drop in accuracy.
 
 
 
