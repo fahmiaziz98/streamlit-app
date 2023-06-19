@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-scikit-learn==1.0.2
-numpy==1.22.4
-jcopml==1.2.0
-xgboost==1.7.1
+scikit-learn
+numpy
+jcopml
+xgboost
 matplotlib
 seaborn
 pandas
 pickle
-=======
-pickle
-scikit-learn==1.0.2
-numpy==1.22.4
-jcopml==1.2.0
-xgboost==1.7.1
->>>>>>> 6b9252f94911e6f333b5fe3cc16f609a1e7366e9
