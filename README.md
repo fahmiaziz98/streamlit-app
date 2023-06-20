@@ -77,6 +77,7 @@ The table below presents the accuracy scores of different machine learning model
 
 The table provides a comparison of the accuracy scores achieved by each model, enabling us to identify the best-performing model for predicting rental prices in the House Rental Dataset. As you can see, the model has an overfit because there are too many outliers, and I tried replacing the outliers with intervals and the result is that the model has a considerable drop in accuracy.
 
+## Deploy with streamlit
+`https://house-rental.streamlit.app/`
 
-
-
+## Deploy model with FastAPI and Docker
