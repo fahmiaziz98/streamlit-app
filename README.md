@@ -89,4 +89,4 @@ This time I experimented with deploying a model using FastAPI and Docker. My fir
 ![nobatch](img/nobatch.png)
 #### with-batch
 And in my second experiment, I made predictions with batches [here](https://github.com/fahmiaziz98/streamlit-app/tree/main/FastAPI/with-batch)
-![withbatch](img/wbatch)
+![withbatch](img/wbatch.png)
