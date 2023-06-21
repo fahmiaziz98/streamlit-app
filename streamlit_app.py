@@ -91,7 +91,7 @@ pages = {"EDA":eda, "Predict":predict}
 
 
 def main():
-    st.title("Hello, World! EDA and Prediction Streamlit App")
+    st.title("ApartemenPriceEstimator && Exploratory Data Analyst")
     selected_page = st.sidebar.selectbox("Choose a page", options=list(pages.keys()))
 
     pages[selected_page]()
