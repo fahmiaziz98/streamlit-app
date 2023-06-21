@@ -8,11 +8,12 @@ from fastapi import FastAPI
 app = FastAPI(title="Prediction House rental with-batch")
 
 class HouseRent(BaseModel):
-    batches: List[Union[str, int, float]] = conlist(item_type=Union[str, int, float], min_items=10, max_items=10)
+    batches: List[conlist(item_type=Union[int, str, float], min_items=10, max_items=10)]
+#     batches: List[Union[str, int, float]] = conlist(item_type=Union[str, int, float], min_items=10, max_items=10)
         
 @app.on_event("startup")
 def load_model():
-    with open("final_model_v2.pkl", "rb") as file:
+    with open("../app/final_model_v2.pkl", "rb") as file:
         global model
         model = pickle.load(file)
         
@@ -22,7 +23,7 @@ def home():
 
 @app.post("/predict")
 def predict(rent: HouseRent):
-    batches = [rent.batches]  # Wrap the batches in a list for batch prediction
+    batches = rent.batches  # Wrap the batches in a list for batch prediction
     np_batches = np.array(batches)
     pred = model.predict(np_batches).tolist()
     return {"Prediction": pred}
