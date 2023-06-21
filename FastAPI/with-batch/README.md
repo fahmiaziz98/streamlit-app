@@ -3,7 +3,7 @@
 ```python
 import pickle
 import numpy as np
-from typing import List
+from typing import List, Union
 from fastapi import FastAPI
 from pydantic import BaseModel, conlist
 
