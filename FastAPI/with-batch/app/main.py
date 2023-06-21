@@ -9,7 +9,6 @@ app = FastAPI(title="Prediction House rental with-batch")
 
 class HouseRent(BaseModel):
     batches: List[conlist(item_type=Union[int, str, float], min_items=10, max_items=10)]
-#     batches: List[Union[str, int, float]] = conlist(item_type=Union[str, int, float], min_items=10, max_items=10)
         
 @app.on_event("startup")
 def load_model():
@@ -23,7 +22,7 @@ def home():
 
 @app.post("/predict")
 def predict(rent: HouseRent):
-    batches = rent.batches  # Wrap the batches in a list for batch prediction
+    batches = rent.batches  
     np_batches = np.array(batches)
     pred = model.predict(np_batches).tolist()
     return {"Prediction": pred}
