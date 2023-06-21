@@ -8,8 +8,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel, conlist
 
 class HouseRent(BaseModel):
-    batches: List[conlist(item_type=[str, int, float], min_items=10, max_items=10)]
-
+    batches: List[conlist(item_type=Union[int, str, float], min_items=10, max_items=10)]
+     
 @app.post("/predict")
 def predict(rent: HouseRent):
     batches = rent.batches

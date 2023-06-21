@@ -18,7 +18,7 @@ def load_model():
         
 @app.get("/")
 def home():
-    return "Congratulations! Your API is working as expected. Now head over to http://localhost:81/docs"
+    return "Your API is working as expected. Now head over to http://localhost:81/docs"
 
 @app.post("/predict")
 def predict(rent: HouseRent):
