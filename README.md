@@ -85,14 +85,14 @@ The table provides a comparison of the accuracy scores achieved by each model, e
 
 
 ## Deploy model with FastAPI and Docker
-#### 1)no-batch
+#### 1) no-batch
 
 This time I experimented with deploying a model using FastAPI and Docker. My first experiment was to perform non-batch predictions [here](https://github.com/fahmiaziz98/streamlit-app/tree/main/FastAPI/no-batch).
 
 ![nobatch](img/nobatch.png)
 
 
-#### 2.)with-batch
+#### 2) with-batch
 
 And in my second experiment, I made predictions with batches [here](https://github.com/fahmiaziz98/streamlit-app/tree/main/FastAPI/with-batch)
 
