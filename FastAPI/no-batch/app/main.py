@@ -20,7 +20,7 @@ class HouseRent(BaseModel):
     
 @app.on_event("startup")
 def load_model():
-    with open("/app/final_model_v2.pkl", "rb") as file:
+    with open("../app/final_model_v2.pkl", "rb") as file:
         global model
         model = pickle.load(file)
         
