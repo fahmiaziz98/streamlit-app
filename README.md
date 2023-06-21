@@ -79,7 +79,8 @@ The table provides a comparison of the accuracy scores achieved by each model, e
 
 ## Deploy with streamlit
 
-
-`https://house-rental.streamlit.app/`
+![ui_st](img/st-1.png)
+![ui_st_2](img/st-2.png)
+Demo application [here](https://house-rental.streamlit.app/)
 
 ## Deploy model with FastAPI and Docker
