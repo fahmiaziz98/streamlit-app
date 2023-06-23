@@ -1,3 +1,4 @@
 scikit-learn
 uvicorn
 fastapi
+lightgbm==3.3.5
