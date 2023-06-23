@@ -1,6 +1,5 @@
 {
     "bhk": 3,
-    "area_type": "Carpet Area",
     "city": "Bangalore",
     "furnishing_status": "Semi-Furnished",
     "tenant_prefered": "Bachelors/Family",
@@ -8,5 +7,6 @@
     "point_contract": "Contact Owner",
     "rental_floor": 18,
     "total_num_floor": 19,
-    "fixed_size": 2004.243196
+    "fixed_size": 2004.243196,
+    "square_feet_rent": 12.25
 }

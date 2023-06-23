@@ -8,7 +8,6 @@ app = FastAPI(title="Prediction House rental no-batch")
 
 class HouseRent(BaseModel):
     bhk: int
-    area_type: str
     city: str
     furnishing_status: str
     tenant_prefered: str
@@ -17,10 +16,11 @@ class HouseRent(BaseModel):
     rental_floor: int
     total_num_floor: int
     fixed_size: float
+    square_feet_rent: float
     
 @app.on_event("startup")
 def load_model():
-    with open("../app/final_model_v2.pkl", "rb") as file:
+    with open("../app/lgbm_model.pkl", "rb") as file:
         global model
         model = pickle.load(file)
         
@@ -30,7 +30,6 @@ def predict(rent: HouseRent):
         [
             [
                 rent.bhk,
-                rent.area_type,
                 rent.city,
                 rent.furnishing_status,
                 rent.tenant_prefered,
@@ -38,7 +37,8 @@ def predict(rent: HouseRent):
                 rent.point_contract,
                 rent.rental_floor,
                 rent.total_num_floor,
-                rent.fixed_size
+                rent.fixed_size,
+                rent.square_feet_rent
             ]
         ]
     )
@@ -46,4 +46,4 @@ def predict(rent: HouseRent):
     pred = model.predict(data_point).tolist()
     pred = pred[0]
     print(pred)
-    return {"Prediction": pred}
+    return {"Prediction": np.round(pred, 2)}

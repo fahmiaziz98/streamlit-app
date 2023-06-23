@@ -20,7 +20,7 @@ For Researchers and Analysts:
 
 ## About Dataset
 This dataset contains information about house rentals in India. The dataset includes various parameters such as the number of bedrooms, rent, size, floor details, area type, area locality, city, furnishing status, preferred tenant type, number of bathrooms, and point of contact.
-The dataset can be downloaded from [Kaggle](https://www.kaggle.com/code/coteli/house-rent-prediction-eda).
+The dataset can be downloaded from [Kaggle](https://www.kaggle.com/).
 #### Dataset Glossary (Column-Wise)
 - BHK: Number of Bedrooms, Hall, Kitchen.
 - Rent: Rent of the Houses/Apartments/Flats.
@@ -59,9 +59,9 @@ By working with the House Rental Dataset, you can achieve the following learning
 
 ## Accuracy Model
 
-After training and tuning the machine learning model on the Home Rental Dataset, the performance of the best model is evaluated using accuracy as the evaluation metric. The model accuracy on the test set is 78%, which shows how well the model predicts the rental price based on the given features.
+After training and tuning the machine learning model on the Home Rental Dataset, the performance of the best model is evaluated using accuracy as the evaluation metric. The model accuracy on the test set is 98%, which shows how well the model predicts the rental price based on the given features.
 
-![Model Accuracy](img/acc.png)
+![Model Accuracy](img/acc_2.png)
 
 The figure above shows a visualization of the model accuracy, which indicates the predictive power of the trained model.
 
@@ -69,10 +69,10 @@ The figure above shows a visualization of the model accuracy, which indicates th
 
 The table below presents the accuracy scores of different machine learning models evaluated during the model selection and tuning process:
 
-| XGBRegressor    | Accuracy Score train | Accuracy Score test |  RMSE  |
-|-----------------|----------------------|---------------------|--------|
-| Baseline model  | 0.88                 |0.78                 |11669.4 |
-| Hyperparam      | 0.83                 |0.78                 |11676.6 |
+| Model           |  Accuracy Score |  RMSE  |
+|-----------------|---------------- |--------|
+| XGBRegressor    |      0.984      |  2698  |
+| LGBMRegressor   |      0.986      |  2547  |
 
 
 The table provides a comparison of the accuracy scores achieved by each model, enabling us to identify the best-performing model for predicting rental prices in the House Rental Dataset. As you can see, the model has an overfit because there are too many outliers, and I tried replacing the outliers with intervals and the result is that the model has a considerable drop in accuracy.
@@ -87,13 +87,15 @@ The table provides a comparison of the accuracy scores achieved by each model, e
 ## Deploy model with FastAPI and Docker
 #### 1) no-batch
 
-This time I experimented with deploying a model using FastAPI and Docker. My first experiment was to perform non-batch predictions [here](https://github.com/fahmiaziz98/streamlit-app/tree/main/FastAPI/no-batch).
+This time I experimented with deploying a model using FastAPI and Docker. My first experiment was to perform non-batch predictions [here](https://github.com/fahmiaziz98/streamlit-app/tree/main/FastAPI/no-batch). if you run in the local use command `uvicorn main:app --reload`
 
-![nobatch](img/nobatch.png)
+![nobatch](img/nobatch_1.png)
+![nobatch](img/nobatch_2.png)
 
 
 #### 2) with-batch
 
 And in my second experiment, I made predictions with batches [here](https://github.com/fahmiaziz98/streamlit-app/tree/main/FastAPI/with-batch)
 
-![withbatch](img/wbatch.png)
+![withbatch](img/withbatch_1.png)
+![withbatch](img/withbatch_2.png)
