@@ -79,7 +79,7 @@ The table provides a comparison of the accuracy scores achieved by each model, e
 
 ## Deploy with streamlit
 
-**Demo application [here](https://house-rental.streamlit.app/)**
+**Demo application [here](https://house-rent.streamlit.app//)**
 ![ui_st](img/st-1.png)
 ![ui_st_2](img/st-2.png)
 
