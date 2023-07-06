@@ -1,4 +1,4 @@
-# End-to-End Machine Learning Project
+# House Price Prediction Using Machine Learning Algorithms: A Case Study in the Real Estate Industry
 
 ## Problem Statement
 The goal of this project is to analyze the house rental dataset and build a predictive model that can estimate the rent of a house based on its features. The project involves performing exploratory data analysis (EDA) to gain insights, preprocessing the data, selecting a suitable machine learning algorithm, tuning the model hyperparameters, and finally deploying the model using Streamlit.
@@ -99,3 +99,15 @@ And in my second experiment, I made predictions with batches [here](https://gith
 
 ![withbatch](img/withbatch_1.png)
 ![withbatch](img/withbatch_2.png)
+
+
+## Conclusion
+In this project, I developed a machine learning model to predict house rental prices based on various features. By analyzing the dataset, performing data preprocessing, and selecting suitable machine learning algorithms, I was able to build an accurate predictive model.
+
+The project aimed to provide valuable insights into the housing rental market in India. Through exploratory data analysis, I gained insights into the dataset and addressed data inconsistencies. The dataset included information such as the number of bedrooms, rent, size, floor details, area type, area locality, city, furnishing status, preferred tenant type, number of bathrooms, and point of contact.
+
+By applying machine learning techniques, I developed predictive models and evaluated their performance using metrics such as accuracy and RMSE. The best-performing models were XGBRegressor and LGBMRegressor, achieving high accuracy scores.
+
+To make the model accessible to users, I deployed it using Streamlit, allowing users to input property features and obtain rental price estimates. I also experimented with deploying the model using FastAPI and Docker.
+
+Overall, this project provided valuable insights into the rental market in India and demonstrated the application of machine learning algorithms in predicting house rental prices.
