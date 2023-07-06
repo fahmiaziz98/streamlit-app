@@ -1,6 +1,6 @@
 # House Price Prediction Using Machine Learning Algorithms: A Case Study in the Real Estate Industry
 
-## Problem Statement
+## Project Goals
 The goal of this project is to analyze the house rental dataset and build a predictive model that can estimate the rent of a house based on its features. The project involves performing exploratory data analysis (EDA) to gain insights, preprocessing the data, selecting a suitable machine learning algorithm, tuning the model hyperparameters, and finally deploying the model using Streamlit.
 
 ## Motivation
